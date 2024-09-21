@@ -4,7 +4,12 @@
     "./lib"
   ],
   "devDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "esbuild": "*",
+    "preact": "*",
     "react": "*",
-    "preact": "*"
+    "react-dom": "*",
+    "typescript": "*"
   }
 }

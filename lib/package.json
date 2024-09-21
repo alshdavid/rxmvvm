@@ -2,5 +2,28 @@
   "name": "rxmvvm",
   "version": "0.0.1",
   "main": "index.js",
-  "license": "MIT"
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "rxmvvm:source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./reactive": {
+      "rxmvvm:source": "./src/reactive/index.ts",
+      "types": "./dist/reactive/index.d.ts",
+      "default": "./dist/reactive/index.js"
+    },
+    "./preact": {
+      "rxmvvm:source": "./src/preact/index.ts",
+      "types": "./dist/preact/index.d.ts",
+      "default": "./dist/preact/index.js"
+    },
+    "./react": {
+      "rxmvvm:source": "./src/react/index.ts",
+      "types": "./dist/react/index.d.ts",
+      "default": "./dist/react/index.js"
+    }
+  }
 }
