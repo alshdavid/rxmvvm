@@ -1,0 +1,10 @@
+{
+  "name": "@workspace/root",
+  "workspaces": [
+    "./lib"
+  ],
+  "devDependencies": {
+    "react": "*",
+    "preact": "*"
+  }
+}
