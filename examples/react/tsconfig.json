@@ -13,7 +13,13 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "lib": ["DOM", "ESNext"],
-    "types": []
+    "types": [],
+    "paths": {
+      "rxmvvm": ["../../lib/src/index.ts"],
+      "rxmvvm/preact": ["../../lib/src/preact/index.ts"],
+      "rxmvvm/react": ["../../lib/src/react/index.ts"],
+      "rxmvvm/reactive": ["../../lib/src/reactive/index.ts"],
+    }
   },
   "include": ["src", "test"],
 }

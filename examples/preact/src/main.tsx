@@ -1,21 +1,15 @@
 import { h, render } from 'preact'
-import { ChangeType, makeObservable } from 'rxmvvm'
+import { ChangeType } from 'rxmvvm'
 import { useViewModel } from 'rxmvvm/preact'
 
 class AppVm {
-  input: string
-
-  constructor() {
-    this.input = 'Hello World'
-
-    makeObservable(this, {
-      input: ChangeType.Push
-    })
-  }
+  input = 'Hello World'
 }
 
 function App() {
-  const vm = useViewModel(() => new AppVm())
+  const vm = useViewModel(AppVm, {
+    input: ChangeType.Push
+  })
   
   return <div>
     <input 
