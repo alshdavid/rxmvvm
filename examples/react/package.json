@@ -1,4 +1,8 @@
 {
-  "name": "@workspace/example-preact",
-  "version": "0.0.1"
+  "name": "@workspace/example-react",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npx esbuild --bundle --outdir=dist --format=esm ./src/main.tsx",
+    "dev": "npx esbuild --bundle --outdir=dist --format=esm --watch --serve=0.0.0.0:9000 --servedir=./ ./src/main.tsx"
+  }
 }
