@@ -17,6 +17,7 @@
     "paths": {
       "rxmvvm": ["../../lib/src/index.ts"],
       "rxmvvm/preact": ["../../lib/src/preact/index.ts"],
+      "rxmvvm/preact/forms": ["../../lib/src/preact/forms/index.ts"],
       "rxmvvm/react": ["../../lib/src/react/index.ts"],
       "rxmvvm/reactive": ["../../lib/src/reactive/index.ts"],
     }

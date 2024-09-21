@@ -1,24 +1,25 @@
 import { h, render } from 'preact'
-import { ChangeType } from 'rxmvvm'
-import { useViewModel } from 'rxmvvm/preact'
+import { useViewModel, ChangeType } from 'rxmvvm/preact'
+import { InputField } from 'rxmvvm/preact/forms'
 
 class AppVm {
-  input = 'Hello World'
+  input = new InputField('Hello')
 }
 
 function App() {
   const vm = useViewModel(AppVm, {
-    input: ChangeType.Push
+    input: ChangeType.Inherit
   })
-  
+
   return <div>
-    <input 
-      value={vm.input}
-      onInput={(e: any) => vm.input = e.target.value} />
-    <h4>{vm.input}</h4>
+    <input {...vm.input.props()} />
+    <h4>{vm.input.value}</h4>
+    <div>touched: {vm.input.touched.toString()}</div>
+    <div>pristine: {vm.input.pristine.toString()}</div>
+    <div>valid: {vm.input.valid.toString()}</div>
+    <div>validating: {vm.input.validating.toString()}</div>
   </div>
 }
-
 
 const div = document.createElement('div')
 document.body.appendChild(div)
